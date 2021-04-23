@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const ROOM_ID = "myRoomId"
+    </script>
+    <script defer src="peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="script_client.js" defer></script>
+</head>
+<body>
+    <!-- <video id="local-video" width="480px" style="border: 1px #000 solid;" autoplay>Видео</video> -->
+    <video id="remote-video" width="100%" style="border: 1px #000 solid;" autoplay>Видео</video>
+    <table>
+        <tr>
+            <td><button id="connect" onclick="startCall()">Связаться</button></td>
+            <td width="100%"></td>
+            <td><button id="to-list">Отправить&nbsp;в&nbsp;лист&nbsp;ожидания</button></td>
+            <td><button id="end-call" onclick="stopCall()">Завершить</button></td>
+        </tr>
+    </table>
+    <br><label>Вывод письменного ответа кандидата:<br></label><br>
+    <div style="display: block;">
+        <textarea id="text-area" rows="10"
+            onchange="sendText()" onkeyup="sendText()"
+            style="box-sizing: border-box; width: 100%;">
+        </textarea>
+    </div>
+</body>
+</html>
