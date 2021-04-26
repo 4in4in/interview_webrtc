@@ -14,7 +14,7 @@ setupTextField();
 function init() {
   myPeer = new Peer(undefined, {
     host: '/',
-    port: '6971'
+    port: '6972'
   });
 
   myPeer.on('call', call => { /// выполняется у второго подключившегося

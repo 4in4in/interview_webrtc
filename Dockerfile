@@ -8,6 +8,6 @@ COPY . .
 
 RUN npm ci
 
-EXPOSE 6971
+EXPOSE 6972
 
 CMD npm run devStart

@@ -4,7 +4,7 @@ const cert = fs.readFileSync('certs/tmp/cert.pem')
 const credentials = { key: key, cert: cert }
 
 const host = '0.0.0.0'
-const port = 6971
+const port = 6972
 
 const express = require('express')
 const app = express()
