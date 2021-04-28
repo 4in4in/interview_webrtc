@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+button {
+    height: 44px;
+    padding: 0 12px;
+    font-size: 15px;
+    line-height: 20px;
+    background-color: #F9F9F9;
+    border: 1px solid #010698;
+    align-items: center;
+    border-radius: 12px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    margin: 5px;
+}
+button#connect {
+    background-color: #0F128C;
+    color: #fff !important;
+}
+video {
+    border-radius: 16px;
+    border: 2px solid #0f128c;
+    box-sizing: border-box;
+    width: 100%;
+}
+textarea {
+    height: 96px;
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #0F128C;
+    border-radius: 12px;
+    background-color: #F9F9F9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+div#controls {
+    display: flex;
+    flex-direction: row;
+}
+div#btns-empty-space {
+    flex-grow: 1;
+}
+.textarea-label {
+    color: #0F128C;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn-label {
+    margin-left: 5px;
+}

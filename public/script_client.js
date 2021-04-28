@@ -1,6 +1,6 @@
 const socket = io('/');
 const remoteVideo = document.getElementById('remote-video');
-const localVideo = document.getElementById('local-video');
+// const localVideo = document.getElementById('local-video');
 const textInput = document.getElementById('text-area');
 var myPeer = null;
 const peers = {};

@@ -11,24 +11,28 @@
     <script defer src="peerjs.min.js"></script>
     <script src="/socket.io/socket.io.js" defer></script>
     <script src="script_client.js" defer></script>
+    <link rel="stylesheet" href="client_style.css">
 </head>
 <body>
     <!-- <video id="local-video" width="480px" style="border: 1px #000 solid;" autoplay>Видео</video> -->
-    <video id="remote-video" width="100%" style="border: 1px #000 solid;" autoplay>Видео</video>
-    <table>
-        <tr>
-            <td><button id="connect" onclick="startCall()">Связаться</button></td>
-            <td width="100%"></td>
-            <td><button id="to-list">Отправить&nbsp;в&nbsp;лист&nbsp;ожидания</button></td>
-            <td><button id="end-call" onclick="stopCall()">Завершить</button></td>
-        </tr>
-    </table>
-    <br><label>Вывод письменного ответа кандидата:<br></label><br>
-    <div style="display: block;">
-        <textarea id="text-area" rows="10"
-            onchange="sendText()" onkeyup="sendText()"
-            style="box-sizing: border-box; width: 100%;">
-        </textarea>
+    <video id="remote-video" autoplay>Видео</video>
+    <div id="controls">
+        <button id="connect" onclick="startCall()">
+            <img src="icons/interview_white.svg">
+            <label class="btn-label">Связаться</label>
+        </button>
+        <div id="btns-empty-space"></div>
+        <button id="to-list">
+            <img src="icons/wait_list_light.svg">
+            <label class="btn-label">Отправить&nbsp;в&nbsp;лист&nbsp;ожидания</label>
+        </button>
+        <button id="end-call" onclick="stopCall()">
+            <img src="icons/stop_light.svg">
+            <label class="btn-label">Завершить</label>
+        </button>
     </div>
+ 
+    <br><label class="textarea-label">Вывод письменного ответа кандидата:<br></label><br>
+    <textarea id="text-area" onchange="sendText()" onkeyup="sendText()"></textarea>
 </body>
 </html>

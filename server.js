@@ -46,4 +46,4 @@ io.on('connection', socket => {
 
 app.use('/', ExpressPeerServer(server, { debug:true }));
 
-server.listen(port, host, () => console.log(`server running at ${host}:${port}`))
+server.listen(port, host, () => console.log(`server running at ${host}:${port}\nlink: https://${host}:${port}/interview_client`))
