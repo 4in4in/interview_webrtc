@@ -25,19 +25,6 @@ video {
     box-sizing: border-box;
     width: 100%;
 }
-textarea {
-    height: 96px;
-    margin-top: 16px;
-    padding: 12px;
-    border: 1px solid #0F128C;
-    border-radius: 12px;
-    background-color: #F9F9F9;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    line-height: 20px;
-    box-sizing: border-box;
-    width: 100%;
-}
 div#controls {
     display: flex;
     flex-direction: row;
@@ -56,4 +43,19 @@ div#btns-empty-space {
 }
 .btn-label {
     margin-left: 5px;
+}
+
+div#text-area-container {
+    min-height: 96px;
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #0F128C;
+    border-radius: 12px;
+    background-color: #F9F9F9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    color: #006600;
 }

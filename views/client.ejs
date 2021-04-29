@@ -10,7 +10,8 @@
     </script>
     <script defer src="peerjs.min.js"></script>
     <script src="/socket.io/socket.io.js" defer></script>
-    <script src="script_client.js" defer></script>
+    <script src="client_text.js" defer></script>
+    <script src="client_video.js" defer></script>
     <link rel="stylesheet" href="client_style.css">
 </head>
 <body>
@@ -33,6 +34,7 @@
     </div>
  
     <br><label class="textarea-label">Вывод письменного ответа кандидата:<br></label><br>
-    <textarea id="text-area" onchange="sendText()" onkeyup="sendText()"></textarea>
+    <br>
+    <div id="text-area-container" contenteditable="true"></div>
 </body>
 </html>

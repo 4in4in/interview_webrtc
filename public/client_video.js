@@ -1,15 +1,12 @@
 const socket = io('/');
 const remoteVideo = document.getElementById('remote-video');
 // const localVideo = document.getElementById('local-video');
-const textInput = document.getElementById('text-area');
 var myPeer = null;
 const peers = {};
 var localStream = null;
 var remoteStream = null;
 var constraints = { video: true, audio: true };
 var dataConnection = null;
-
-setupTextField();
 
 function init() {
   myPeer = new Peer(undefined, {
@@ -53,7 +50,6 @@ function startCall() {
       init();
     });
   }
-
 }
 
 function stopCall() {
@@ -96,7 +92,7 @@ function connectToNewUser(userId, stream) { // выполняется у пер�
 
 function sendText() {
   if(dataConnection!== null) {
-    dataConnection.send(textInput.value);
+    dataConnection.send(getMessageText()); /* отправка сообщения */
   }
 }
 
@@ -108,27 +104,7 @@ function setVideo(videoObject, stream) {
 }
 
 function setupDataConnection(dataConnection) {
-  dataConnection.on('data', data => {
-    textInput.value = data;
-    textInput.style.color="#990000";
-  });
-}
-
-function setupTextField() {
-  textInput.addEventListener('keydown', function(e) {
-    textInput.style.color="#006600"
-    if (e.key == 'Tab') {
-      e.preventDefault();
-      var start = textInput.selectionStart;
-      var end = textInput.selectionEnd;
-
-      var tabulation = '    ';
-  
-      textInput.value = textInput.value.substring(0, start) +
-        tabulation + textInput.value.substring(end);
-  
-      textInput.selectionStart =
-      textInput.selectionEnd = start + tabulation.length;
-    }
+  dataConnection.on('data', data => { /* обработка получения сообщения */
+    setMessageText(data);
   });
 }
