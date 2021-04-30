@@ -5,13 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Закомментировать следующую строку для локального запуска -->
     <base href="/new_interview/">
+    
     <script>
         const ROOM_ID = "myRoomId"
     </script>
     <script defer src="peerjs.min.js"></script>
+
+    <!-- Строка №1 - для запуска на сервере, №2 - локально -->
+
     <script src="socket.io/socket.io.js" defer></script>
     <!-- <script src="/socket.io/socket.io.js" defer></script> -->
+
+    <!-- Раскомментировать требуемую строку и закомментировать другую -->
+
     <script src="client_text.js" defer></script>
     <script src="client_video.js" defer></script>
     <link rel="stylesheet" href="client_style.css">

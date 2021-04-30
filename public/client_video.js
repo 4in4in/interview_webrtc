@@ -1,5 +1,5 @@
-const socket = io('https://mycandidate.onti.actcognitive.org', { path: '/new_interview/socket.io' });
-// const socket = io('/');
+const socket = io('https://mycandidate.onti.actcognitive.org', { path: '/new_interview/socket.io' }); /// запуск на сервере
+// const socket = io('/'); /// локальный запуск
 const remoteVideo = document.getElementById('remote-video');
 // const localVideo = document.getElementById('local-video');
 var myPeer = null;
