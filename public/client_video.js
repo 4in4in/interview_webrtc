@@ -1,4 +1,4 @@
-const socket = io('/new_interview');
+const socket = io('/', {resource: '/new_interview'});
 const remoteVideo = document.getElementById('remote-video');
 // const localVideo = document.getElementById('local-video');
 var myPeer = null;

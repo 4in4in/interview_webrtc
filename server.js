@@ -9,7 +9,7 @@ const port = 6972
 const express = require('express')
 const app = express()
 const server = require('https').createServer(credentials, app)
-const io = require('socket.io')(server)
+const io = require('socket.io')(server, { path: '/new_interview/socket.io' })
 
 var ExpressPeerServer = require('peer').ExpressPeerServer;
 
