@@ -10,7 +10,7 @@ var dataConnection = null;
 
 function init() {
   myPeer = new Peer(undefined, {
-    host: '/new_interview',
+    host: '/',
     port: '6972'
   });
 

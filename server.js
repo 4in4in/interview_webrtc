@@ -16,7 +16,7 @@ var ExpressPeerServer = require('peer').ExpressPeerServer;
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-app.get('/new_interview', (req, res) => {
+app.get('/', (req, res) => {
   // res.redirect('/room?id=my_room_id')
   res.render('client')
 })
@@ -45,6 +45,6 @@ io.on('connection', socket => {
   })
 })
 
-app.use('/new_interview', ExpressPeerServer(server, { debug:true }));
+app.use('/', ExpressPeerServer(server, { debug:true }));
 
 server.listen(port, host, () => console.log(`server running at ${host}:${port}\nlink: https://${host}:${port}/interview_client`))
