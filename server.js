@@ -16,7 +16,7 @@ var ExpressPeerServer = require('peer').ExpressPeerServer;
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
+app.get('/new_interview', (req, res) => {
   // res.redirect('/room?id=my_room_id')
   res.render('client')
 })
