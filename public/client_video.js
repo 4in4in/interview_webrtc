@@ -1,4 +1,5 @@
 const socket = io('https://mycandidate.onti.actcognitive.org/new_interview', { path: '/new_interview/socket.io' });
+// const socket = io('/');
 const remoteVideo = document.getElementById('remote-video');
 // const localVideo = document.getElementById('local-video');
 var myPeer = null;
@@ -10,7 +11,7 @@ var dataConnection = null;
 
 function init() {
   myPeer = new Peer(undefined, {
-    host: '/',
+    host: 'https://mycandidate.onti.actcognitive.org/new_interview/',
     port: '6972'
   });
 

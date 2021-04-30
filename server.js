@@ -10,6 +10,7 @@ const express = require('express')
 const app = express()
 const server = require('https').createServer(credentials, app)
 const io = require('socket.io')(server, { path: '/new_interview/socket.io' })
+// const io = require('socket.io')(server)
 
 var ExpressPeerServer = require('peer').ExpressPeerServer;
 
@@ -47,4 +48,4 @@ io.on('connection', socket => {
 
 app.use('/', ExpressPeerServer(server, { debug:true }));
 
-server.listen(port, host, () => console.log(`server running at ${host}:${port}\nlink: https://${host}:${port}/interview_client`))
+server.listen(port, host, () => console.log(`server running at link: https://${host}:${port}`))
