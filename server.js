@@ -17,17 +17,18 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  res.redirect('/room?id=my_room_id')
-})
-
-app.get('/room', (req, res) => {
-  const roomId = req.query.id;
-  res.render('room', { roomId: roomId }) /// сюда можно передавать ID кандидата
-})
-
-app.get('/interview_client', (req, res) => {
+  // res.redirect('/room?id=my_room_id')
   res.render('client')
 })
+
+// app.get('/room', (req, res) => {
+//   const roomId = req.query.id;
+//   res.render('room', { roomId: roomId }) /// сюда можно передавать ID кандидата
+// })
+
+// app.get('/interview_client', (req, res) => {
+//   res.render('client')
+// })
 
 io.on('connection', socket => {
   socket.on('join-room', (roomId, userId) => {
