@@ -11,8 +11,8 @@ var dataConnection = null;
 
 function init() {
   myPeer = new Peer(undefined, {
-    host: 'mycandidate.onti.actcognitive.org/new_interview/',
-    // port: '6972'
+    host: '/',
+    port: '6972'
   });
 
   myPeer.on('call', call => { /// выполняется у второго подключившегося
